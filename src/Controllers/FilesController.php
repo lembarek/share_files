@@ -92,5 +92,4 @@ class FilesController extends Controller
         $file = $this->fileRepo->getFileBySlug($slug);
         return view('shareFiles::show', compact('file'));
     }
-
 }

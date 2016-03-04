@@ -60,6 +60,4 @@ class File extends Model
     {
         return unserialize($universities);
     }
-
-
 }

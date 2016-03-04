@@ -12,8 +12,8 @@ class CreateFilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('files', function(Blueprint $table)
-            {
+        Schema::create('files', function (Blueprint $table) {
+            
                 $table->increments('id');
                 $table->string('name');
                 $table->string('slug');
@@ -21,7 +21,7 @@ class CreateFilesTable extends Migration
                 $table->string('links');
                 $table->string('universities');
                 $table->timestamps();
-            });
+        });
 
     }
 

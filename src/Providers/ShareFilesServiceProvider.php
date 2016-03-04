@@ -4,7 +4,8 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class ShareFilesServiceProvider extends ServiceProvider {
+class ShareFilesServiceProvider extends ServiceProvider
+{
 
     /**
     * Bootstrap any application services.
@@ -13,7 +14,7 @@ class ShareFilesServiceProvider extends ServiceProvider {
     */
     public function boot()
     {
-        if(! $this->app->routesAreCached()){
+        if (! $this->app->routesAreCached()) {
             require __DIR__.'/../routes.php';
         }
 
@@ -40,6 +41,4 @@ class ShareFilesServiceProvider extends ServiceProvider {
             'Lembarek\ShareFiles\Repositories\FileRepository'
         );
     }
-
 }
-
