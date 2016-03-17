@@ -1,34 +1,34 @@
 <?php
 use Lembarek\ShareFiles\Controllers\FilesController;
 
-Route::group(['middleware' => 'web'], function () {
+Route::group(['as' => 'file::', 'middleware' => 'web'], function () {
 
     Route::get('/files', [
-    'as' => 'file:index',
+    'as' => 'index',
     'uses' => FilesController::class.'@index',
     ]);
 
 
     Route::get('/search', [
-    'as' => 'file:search',
+    'as' => 'search',
     'uses' => FilesController::class.'@search',
     ]);
 
 
     Route::get('/add', [
-    'as' => 'file:add',
+    'as' => 'add',
     'uses' => FilesController::class.'@add',
     ]);
 
 
     Route::post('/add', [
-    'as' => 'file:add:post',
+    'as' => 'add.post',
     'uses' => FilesController::class.'@postAdd',
     ]);
 
 
     Route::get('/file/{slug}', [
-    'as' => 'file:show',
+    'as' => 'show',
     'uses' => FilesController::class.'@show',
     ]);
 
