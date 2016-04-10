@@ -24,7 +24,6 @@ class AddFileRequest extends Request
     public function rules()
     {
         return [
-                'file' => 'required|max:100000',
                 'name' => '',
                 'description' => '',
                 'links' => 'url',

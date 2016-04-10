@@ -74,8 +74,6 @@ class FilesController extends Controller
 
         $this->fileRepo->create($inputs);
 
-        $request->file('file')->move('upload', $request->file('file')->getClientOriginalName());
-
         return Redirect::back()->with(['flash.message' => trans('file.add_success')]);
 
     }

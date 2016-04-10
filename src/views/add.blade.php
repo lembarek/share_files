@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('shareFiles::layout.master')
 
 @section('title')
 
@@ -6,17 +6,10 @@
 
 @section('content')
     @include('core::partials.errors')
-    <form method="post" action="{{ route('file:add:post') }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('file::add.post') }}" enctype="multipart/form-data">
          <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-        <div class="form-group">
-            <label class="col-md-4 control-label">{{ Lang::get('file')}}</label>
-            <div class="col-md-6">
-            <input type="file" name="file" value="{{ old('file') }}">
-            </div>
-        </div>
-
-        <div class="form-group">
+       <div class="form-group">
             <label class="col-md-4 control-label">{{ Lang::get('files.name')}}</label>
             <div class="col-md-6">
             <input type="text" class="form-control" name="name" value="{{ old('name') }}">

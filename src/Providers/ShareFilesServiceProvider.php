@@ -1,8 +1,7 @@
 <?php
 
- namespace Lembarek\ShareFiles\Providers;
+namespace Lembarek\ShareFiles\Providers;
 
-use Illuminate\Support\ServiceProvider;
 
 class ShareFilesServiceProvider extends ServiceProvider
 {
@@ -14,15 +13,7 @@ class ShareFilesServiceProvider extends ServiceProvider
     */
     public function boot()
     {
-        if (! $this->app->routesAreCached()) {
-            require __DIR__.'/../routes.php';
-        }
-
-        $this->loadViewsFrom(__DIR__.'/../views', 'shareFiles');
-
-        $this->publishes([
-            __DIR__.'/../migrations' => base_path('database/migrations')
-        ], 'migrations');
+        $this->fullBoot('shareFiles', __DIR__.'/../');
     }
 
     /**
