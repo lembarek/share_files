@@ -1,10 +1,11 @@
 @if(isset($files))
 <table>
-    @foreach($files as $file)
-        <tr>
-            <td><a href="{{ route('file::show', $file['slug']) }}">{{ $file['name'] }}</a></td>
+        <tr v-for='file in shownFiles'>
+            <td>
+                <a href="/file/@{{ file.slug }}">@{{ file.name }}</a>
+                <p>@{{ file.description.slice(0, 200) }}...</p>
+            </td>
         </tr>
-    @endforeach
 </table>
 @endif
 

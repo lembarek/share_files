@@ -28,6 +28,11 @@ class AddFileRequest extends Request
                 'description' => '',
                 'links' => 'url',
                 'universities' => '',
+                'filetype' => '',
+                'year' => '',
+                'semester' => '',
+                'factulry' => '',
+                'country' => '',
         ];
     }
 }
