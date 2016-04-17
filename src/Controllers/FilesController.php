@@ -46,7 +46,7 @@ class FilesController extends Controller
     {
         $q = $request->get('q');
         $files  = $this->fileRepo->search($q);
-        $statistics  = getStatistics($files, ['country', 'year', 'semester', 'faculty', 'filetype', 'universities']);
+        $statistics  = getStatistics($files, ['universities', 'faculty', 'filetype', 'semester', 'year', 'country', ]);
         return view::make('shareFiles::search', compact('files', 'statistics', 'parameters'));
     }
 
