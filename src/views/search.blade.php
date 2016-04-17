@@ -7,17 +7,26 @@
 @section('content')
     <div id="shareFiles_search" >
         <div class="row">
+
             <div class="col-md-6 col-md-push-3">
-                @include('shareFiles::partials.search')
+                    @include('shareFiles::partials.search')
             </div>
+
         </div>
+
         <div class="row">
-        <div class="col-md-3">
-            @include('shareFiles::partials.statistics')
-        </div>
-        <div class="col-md-6">
-            @include('shareFiles::partials.files')
-        </div>
+
+            <aside class="col-md-3">
+                @include('shareFiles::partials.statistics')
+            </aside>
+
+            <main class="col-md-6">
+                @include('shareFiles::partials.files')
+            </main>
+
+            <aside class="col-md-3">
+            </aside>
+
         </div>
     </div>
 @stop

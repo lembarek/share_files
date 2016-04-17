@@ -1,4 +1,3 @@
-<aside >
 @foreach($statistics as $key => $arr)
 
     @if(count($arr) > 2 )
@@ -9,4 +8,3 @@
     @endif
 
 @endforeach
-<aside>
