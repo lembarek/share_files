@@ -12,11 +12,6 @@ use Lembarek\ShareFiles\Repositories\FileRepositoryInterface;
 class FilesController extends Controller
 {
 
-    /**
-    * construct
-    *
-    * @return void
-    */
     protected $fileRepo;
 
 
