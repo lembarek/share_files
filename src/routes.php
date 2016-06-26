@@ -1,7 +1,6 @@
 <?php
-use Lembarek\ShareFiles\Controllers\FilesController;
 
-Route::group(['as' => 'file::', 'middleware' => 'web'], function () {
+Route::group(['as' => 'file::', 'middleware' => 'web', 'namespace' => 'Lembarek\ShareFiles\Controllers'], function () {
 
     Route::get('/files', [
     'as' => 'index',
