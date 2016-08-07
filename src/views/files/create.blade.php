@@ -7,7 +7,7 @@
 @section('content')
     @inject('countries', 'Lembarek\Core\Countries\Countries');
     @include('core::partials.errors')
-    <form method="post" action="{{ route('file::add.post') }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('file::files.store') }}" enctype="multipart/form-data">
          <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
        <div class="form-group">

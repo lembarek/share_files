@@ -28,7 +28,7 @@ class FilesController extends Controller
      */
     public function index()
     {
-         return View::make('shareFiles::index');
+         return View::make('shareFiles::files.index');
     }
 
 
@@ -42,7 +42,7 @@ class FilesController extends Controller
         $q = $request->get('q');
         $files  = $this->fileRepo->search($q);
         $statistics  = getStatistics($files, ['universities', 'faculty', 'filetype', 'semester', 'year', 'country', ]);
-        return view::make('shareFiles::search', compact('files', 'statistics', 'parameters'));
+        return view::make('shareFiles::files.search', compact('files', 'statistics', 'parameters'));
     }
 
 
@@ -51,9 +51,9 @@ class FilesController extends Controller
      *
      * @return Response
      */
-    public function add()
+    public function create()
     {
-        return view('shareFiles::add');
+        return view('shareFiles::files.create');
     }
 
 
@@ -62,7 +62,7 @@ class FilesController extends Controller
      *
      * @return void
      */
-    public function postAdd(AddFileRequest $request)
+    public function store(AddFileRequest $request)
     {
         $inputs = $request->except('_token');
 
@@ -84,6 +84,6 @@ class FilesController extends Controller
     public function show($slug)
     {
         $file = $this->fileRepo->getFileBySlug($slug);
-        return view('shareFiles::show', compact('file'));
+        return view('shareFiles::files.show', compact('file'));
     }
 }
