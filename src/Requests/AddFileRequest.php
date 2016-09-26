@@ -2,8 +2,6 @@
 
 namespace Lembarek\ShareFiles\Requests;
 
-use App\Http\Requests\Request;
-
 class AddFileRequest extends Request
 {
     /**
