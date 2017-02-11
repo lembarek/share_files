@@ -27,7 +27,10 @@
     "autoload": {
         "psr-4": {
             "Lembarek\\ShareFiles\\": "src"
-        }
+        },
+        "files": [
+          "src/testing/helpers.php"
+        ]
     },
     "scripts": {
         "test": "phpunit"
